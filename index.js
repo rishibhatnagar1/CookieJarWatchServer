@@ -3,6 +3,7 @@ var http = require('http'),
     express = require('express'),// Using express module, makes writing POST and GET requests easier.
     bodyParser = require('body-parser')// Body parser requried for parsing POST request payload.
 var cV = "none"; // Sahred variable used in post and get . For scaling up, use a Database.
+//have used it to be 0 somewhere in the recent code
 
 var app = express(); // Initializing Express
 app.use(bodyParser.urlencoded({
@@ -30,11 +31,11 @@ app.get('/', function (req, res) {// Handles all the get requests .
 console.log(cV)
   if(cV != "none"){ //Send the value if value is available ,else send none.
   res.send(cV);
-  curValue = "none";
+  curValue = "none"; //Made this 0
 }
 else
 {
-res.send("none");
+res.send("none"); //Made this 0
 }
 })
 
